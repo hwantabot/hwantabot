@@ -1,4 +1,5 @@
 import discord
+import os
 
 client = discord.Client()
 
@@ -20,5 +21,5 @@ async def on_message(message):
     if message.content.startswith("환타샵 핵 종류는?"):
         await message.channel.send("```임펄스VIP사용중!(디스터브드 추가예정)```")
 
-
-client.run("Njg0NjgzOTU4MjMxMTA1NTgz.Xl9rtQ.ocEcVabkKGiNDONevGn2LsZHccg")
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
